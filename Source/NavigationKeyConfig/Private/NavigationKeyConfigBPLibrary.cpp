@@ -1,7 +1,7 @@
 #include "NavigationKeyConfigBPLibrary.h"
 #include "NavigationKeyConfigSubsystem.h"
 
-UNavigationKeyConfigSubsystem* GetNavigationKeyConfigSubsystem(APlayerController* PlayerController)
+inline UNavigationKeyConfigSubsystem* GetNavigationKeyConfigSubsystem(const APlayerController* PlayerController)
 {
 	if (PlayerController)
 	{
