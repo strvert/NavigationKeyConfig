@@ -14,37 +14,37 @@ public:
 	 * 指定したキーに対して、指定した UI ナビゲーションを設定します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void AddNavigationKeyConfig(APlayerController* PlayerController, FKey Key, EUINavigation Navigation);
+	static void AddNavigationKey(APlayerController* PlayerController, FKey Key, EUINavigation Navigation);
 
 	/**
 	 * 指定したキーに対して、指定した UI アクションを設定します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void AddNavigationKeyActionConfig(APlayerController* PlayerController, FKey Key,
+	static void AddNavigationKeyAction(APlayerController* PlayerController, FKey Key,
 	                                  EUINavigationAction NavigationAction);
 	/**
 	 * 指定したキーに設定された UI ナビゲーションを削除します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void RemoveNavigationKeyConfig(APlayerController* PlayerController, FKey Key);
+	static void RemoveNavigationKey(APlayerController* PlayerController, FKey Key);
 
 	/**
 	 * 指定したキーに設定された UI アクションを削除します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void RemoveNavigationKeyActionConfig(APlayerController* PlayerController, FKey Key);
+	static void RemoveNavigationKeyAction(APlayerController* PlayerController, FKey Key);
 
 	/**
 	 * UI ナビゲーションの設定をクリアし、すべてのキーから設定を削除します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void ClearNavigationKeyConfig(APlayerController* PlayerController);
+	static void ClearAllNavigationKey(APlayerController* PlayerController);
 
 	/**
 	 * UI アクションの設定をクリアし、すべてのキーから設定を削除します。
 	 */
 	UFUNCTION(BlueprintCallable, Category = "NavigationKeyConfig")
-	static void ClearNavigationKeyActionConfig(APlayerController* PlayerController);
+	static void ClearAllNavigationKeyAction(APlayerController* PlayerController);
 
 	/**
 	 * UI ナビゲーションの設定をエンジンのデフォルトにリセットします。

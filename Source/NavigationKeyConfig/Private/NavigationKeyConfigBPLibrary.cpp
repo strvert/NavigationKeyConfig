@@ -25,7 +25,7 @@ bool ExecuteNavigationKeyConfig(APlayerController* PlayerController, Func&& Func
 	return false;
 }
 
-void UNavigationKeyConfigBPLibrary::AddNavigationKeyConfig(APlayerController* PlayerController, const FKey Key,
+void UNavigationKeyConfigBPLibrary::AddNavigationKey(APlayerController* PlayerController, const FKey Key,
                                                            EUINavigation Navigation)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
@@ -35,7 +35,7 @@ void UNavigationKeyConfigBPLibrary::AddNavigationKeyConfig(APlayerController* Pl
 	                           });
 }
 
-void UNavigationKeyConfigBPLibrary::AddNavigationKeyActionConfig(APlayerController* PlayerController, const FKey Key,
+void UNavigationKeyConfigBPLibrary::AddNavigationKeyAction(APlayerController* PlayerController, const FKey Key,
                                                                  const EUINavigationAction NavigationAction)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
@@ -45,7 +45,7 @@ void UNavigationKeyConfigBPLibrary::AddNavigationKeyActionConfig(APlayerControll
 	                           });
 }
 
-void UNavigationKeyConfigBPLibrary::RemoveNavigationKeyConfig(APlayerController* PlayerController, FKey Key)
+void UNavigationKeyConfigBPLibrary::RemoveNavigationKey(APlayerController* PlayerController, FKey Key)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
 	                           [Key](FOverrideNavigationConfig& OverrideNavigationConfig)
@@ -54,7 +54,7 @@ void UNavigationKeyConfigBPLibrary::RemoveNavigationKeyConfig(APlayerController*
 	                           });
 }
 
-void UNavigationKeyConfigBPLibrary::RemoveNavigationKeyActionConfig(APlayerController* PlayerController, FKey Key)
+void UNavigationKeyConfigBPLibrary::RemoveNavigationKeyAction(APlayerController* PlayerController, FKey Key)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
 	                           [Key](FOverrideNavigationConfig& OverrideNavigationConfig)
@@ -63,7 +63,7 @@ void UNavigationKeyConfigBPLibrary::RemoveNavigationKeyActionConfig(APlayerContr
 	                           });
 }
 
-void UNavigationKeyConfigBPLibrary::ClearNavigationKeyConfig(APlayerController* PlayerController)
+void UNavigationKeyConfigBPLibrary::ClearAllNavigationKey(APlayerController* PlayerController)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
 	                           [](FOverrideNavigationConfig& OverrideNavigationConfig)
@@ -72,7 +72,7 @@ void UNavigationKeyConfigBPLibrary::ClearNavigationKeyConfig(APlayerController* 
 	                           });
 }
 
-void UNavigationKeyConfigBPLibrary::ClearNavigationKeyActionConfig(APlayerController* PlayerController)
+void UNavigationKeyConfigBPLibrary::ClearAllNavigationKeyAction(APlayerController* PlayerController)
 {
 	ExecuteNavigationKeyConfig(PlayerController,
 	                           [](FOverrideNavigationConfig& OverrideNavigationConfig)
